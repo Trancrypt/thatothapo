@@ -3,17 +3,28 @@ import Navigation from "../components/Navigation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 relative">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: '0.1'
+        }}
+      />
+      
       <Navigation />
       
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 py-12 relative z-10">
         <section className="max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-4xl font-bold text-primary mb-6">
-            Theoretical Physics Researcher
+            Carrollian Physicist
           </h1>
           
           <p className="text-xl text-gray-600 mb-8">
-            Masters graduate pursuing a PhD in Theoretical Physics. Passionate about understanding the fundamental laws of the universe.
+            Masters graduate in Applied Mathematics from the University of Cape Town focusing on Theoretical Cosmology. A passion for physics and championing science outreach.
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
