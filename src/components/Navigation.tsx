@@ -10,7 +10,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="font-serif text-xl font-bold text-primary">
-            Thapelo Thabane
+            Thato Thapo
           </Link>
           <div className="flex space-x-8">
             <Link
