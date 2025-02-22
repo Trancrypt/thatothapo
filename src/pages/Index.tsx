@@ -21,9 +21,9 @@ const Index = () => {
       
       <main className="container mx-auto px-4 py-12 relative z-10">
         <section className="max-w-4xl mx-auto animate-fade-in">
-          <div className="flex items-center gap-6 mb-6">
-            <Avatar className="h-24 w-24">
-              <AvatarImage src="/placeholder.svg" alt="Thato Thapo" />
+          <div className="flex items-center gap-8 mb-6">
+            <Avatar className="h-48 w-48 rounded-full border-4 border-white shadow-lg">
+              <AvatarImage src="/lovable-uploads/6ffacc28-72dd-4ad6-91e9-90209b58a247.png" alt="Thato Thapo" className="object-cover" />
               <AvatarFallback>TT</AvatarFallback>
             </Avatar>
             <div>
