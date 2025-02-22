@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import { Avatar, AvatarImage, AvatarFallback } from "../components/ui/avatar";
+import { Button } from "../components/ui/button";
 
 const Index = () => {
   return (
@@ -30,9 +31,14 @@ const Index = () => {
               <h1 className="text-4xl font-bold text-primary">
                 Thato Thapo
               </h1>
-              <p className="text-xl text-gray-600 mt-4">
+              <p className="text-xl text-gray-600 mt-4 mb-4">
                 Masters graduate in Applied Mathematics from the University of Cape Town focusing on Theoretical Cosmology. A passion for physics and championing science outreach.
               </p>
+              <Link to="/about">
+                <Button variant="secondary" size="lg">
+                  About Me
+                </Button>
+              </Link>
             </div>
           </div>
           
