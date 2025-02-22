@@ -36,45 +36,66 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold text-primary mb-4">Research Interests</h2>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Quantum Field Theory</li>
-                <li>• String Theory</li>
-                <li>• Particle Physics</li>
-                <li>• Quantum Gravity</li>
-              </ul>
+              <h2 className="text-2xl font-bold text-primary mb-4">Latest Blog Posts</h2>
+              <div className="space-y-4">
+                <Link to="/blog/1" className="block hover:bg-gray-50 p-3 rounded-md transition-colors">
+                  <h3 className="font-bold text-lg mb-1">Recent Developments in String Theory</h3>
+                  <p className="text-gray-600 text-sm">Exploring the latest breakthroughs in string theory...</p>
+                </Link>
+                <Link to="/blog/2" className="block hover:bg-gray-50 p-3 rounded-md transition-colors">
+                  <h3 className="font-bold text-lg mb-1">Quantum Computing Progress</h3>
+                  <p className="text-gray-600 text-sm">Analyzing recent advancements in quantum computing...</p>
+                </Link>
+              </div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold text-primary mb-4">Education</h2>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-medium text-gray-900">Masters in Physics</h3>
-                  <p className="text-gray-600">University Name, 2023</p>
+              <h2 className="text-2xl font-bold text-primary mb-4">Recent Projects</h2>
+              <div className="space-y-3">
+                <div className="border-b pb-3">
+                  <h3 className="font-medium text-gray-900">Quantum Field Simulator</h3>
+                  <p className="text-gray-600 text-sm">Interactive visualization of quantum fields</p>
+                </div>
+                <div className="border-b pb-3">
+                  <h3 className="font-medium text-gray-900">Dark Matter Detection</h3>
+                  <p className="text-gray-600 text-sm">Analysis of particle physics data</p>
                 </div>
                 <div>
-                  <h3 className="font-medium text-gray-900">Bachelor in Physics</h3>
-                  <p className="text-gray-600">University Name, 2021</p>
+                  <h3 className="font-medium text-gray-900">Cosmological Models</h3>
+                  <p className="text-gray-600 text-sm">Mathematical modeling of universe expansion</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h2 className="text-2xl font-bold text-primary mb-4">Teaching & Tutoring</h2>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <span className="text-accent">•</span>
+                  <div>
+                    <h3 className="font-medium text-gray-900">Mathematics</h3>
+                    <p className="text-gray-600 text-sm">Advanced calculus and linear algebra</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-accent">•</span>
+                  <div>
+                    <h3 className="font-medium text-gray-900">Physics</h3>
+                    <p className="text-gray-600 text-sm">Quantum mechanics and relativity</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-accent">•</span>
+                  <div>
+                    <h3 className="font-medium text-gray-900">Coding</h3>
+                    <p className="text-gray-600 text-sm">Python for scientific computing</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold text-primary mb-6">Latest Blog Posts</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Link to="/blog/1" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="font-bold text-xl mb-2">Recent Developments in String Theory</h3>
-                <p className="text-gray-600">Exploring the latest breakthroughs in string theory and their implications...</p>
-              </Link>
-              <Link to="/blog/2" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="font-bold text-xl mb-2">Quantum Computing Progress</h3>
-                <p className="text-gray-600">Analyzing recent advancements in quantum computing and their potential impact...</p>
-              </Link>
-            </div>
-          </section>
         </section>
       </main>
     </div>
