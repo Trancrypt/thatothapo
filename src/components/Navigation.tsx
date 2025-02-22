@@ -1,3 +1,4 @@
+
 import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
@@ -9,20 +10,13 @@ const Navigation = () => {
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="font-serif text-xl font-bold text-primary">
+          <Link 
+            to="/" 
+            className="font-serif text-xl font-bold text-primary hover:text-accent transition-colors"
+          >
             Thato Thapo
           </Link>
           <div className="flex space-x-8">
-            <Link
-              to="/"
-              className={`${
-                isActive("/")
-                  ? "text-accent font-medium"
-                  : "text-gray-600 hover:text-accent"
-              } transition-colors`}
-            >
-              Home
-            </Link>
             <Link
               to="/blog"
               className={`${
