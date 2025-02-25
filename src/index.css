@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
 
 @tailwind base;
@@ -6,11 +7,11 @@
 
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply bg-background text-foreground;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-serif text-white;
   }
 }
 
@@ -19,5 +20,20 @@
 }
 
 .blog-content {
-  @apply prose prose-lg prose-indigo mx-auto;
+  @apply prose prose-lg prose-invert mx-auto;
+}
+
+/* Override default link colors */
+a {
+  @apply text-primary hover:text-primary/80 transition-colors;
+}
+
+/* Card styling */
+.card {
+  @apply bg-background-lighter border border-primary/20 shadow-lg;
+}
+
+/* Button styling */
+.btn {
+  @apply bg-primary text-white hover:bg-primary/90 transition-colors;
 }

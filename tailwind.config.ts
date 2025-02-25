@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -22,19 +23,26 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: {
+          DEFAULT: "#4a0000", // dark maroon
+          lighter: "#600000",
+        },
+        foreground: "#ffffff",
         primary: {
-          DEFAULT: "#1a365d",
+          DEFAULT: "#ea384c", // vibrant red
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#4a5568",
+          DEFAULT: "#4a5568", // dark gray
           foreground: "#ffffff",
         },
         accent: {
-          DEFAULT: "#3182ce",
+          DEFAULT: "#ff4d5f", // bright red
           foreground: "#ffffff",
+        },
+        muted: {
+          DEFAULT: "#374151",
+          foreground: "#9ca3af",
         },
       },
       fontFamily: {
@@ -48,13 +56,6 @@ export default {
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
-        },
-      },
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: 'none',
-          },
         },
       },
     },

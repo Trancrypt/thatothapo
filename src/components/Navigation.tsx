@@ -7,12 +7,12 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
   
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-background-lighter shadow-lg border-b border-primary/20">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link 
             to="/" 
-            className="font-serif text-xl font-bold text-primary hover:text-accent transition-colors"
+            className="font-serif text-xl font-bold text-white hover:text-primary transition-colors"
           >
             Thato Thapo
           </Link>
@@ -21,8 +21,8 @@ const Navigation = () => {
               to="/blog"
               className={`${
                 isActive("/blog")
-                  ? "text-accent font-medium"
-                  : "text-gray-600 hover:text-accent"
+                  ? "text-primary font-medium"
+                  : "text-gray-300 hover:text-primary"
               } transition-colors`}
             >
               Blog
@@ -31,8 +31,8 @@ const Navigation = () => {
               to="/projects"
               className={`${
                 isActive("/projects")
-                  ? "text-accent font-medium"
-                  : "text-gray-600 hover:text-accent"
+                  ? "text-primary font-medium"
+                  : "text-gray-300 hover:text-primary"
               } transition-colors`}
             >
               Projects
@@ -41,8 +41,8 @@ const Navigation = () => {
               to="/teaching"
               className={`${
                 isActive("/teaching")
-                  ? "text-accent font-medium"
-                  : "text-gray-600 hover:text-accent"
+                  ? "text-primary font-medium"
+                  : "text-gray-300 hover:text-primary"
               } transition-colors`}
             >
               Teaching
