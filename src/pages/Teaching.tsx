@@ -24,20 +24,30 @@ const Teaching = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
+      {/* Background image with reduced opacity */}
+      <div 
+        className="absolute inset-0 z-0 opacity-10"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+      
       <Navigation />
       
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 py-12 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-primary mb-8">Teaching Experience</h1>
+          <h1 className="text-4xl font-bold text-white mb-8">Teaching Experience</h1>
           
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                <h2 className="text-2xl font-bold text-primary mb-2">{exp.role}</h2>
-                <div className="text-accent mb-2">{exp.institution}</div>
-                <div className="text-gray-600 mb-3">{exp.period}</div>
-                <p className="text-gray-700">{exp.description}</p>
+              <div key={index} className="bg-background-lighter p-6 rounded-lg shadow-lg border border-primary/20">
+                <h2 className="text-2xl font-bold text-white mb-2">{exp.role}</h2>
+                <div className="text-primary mb-2">{exp.institution}</div>
+                <div className="text-gray-300 mb-3">{exp.period}</div>
+                <p className="text-gray-300">{exp.description}</p>
               </div>
             ))}
           </div>
