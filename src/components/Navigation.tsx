@@ -37,6 +37,16 @@ const Navigation = () => {
             >
               Projects
             </Link>
+            <Link
+              to="/teaching"
+              className={`${
+                isActive("/teaching")
+                  ? "text-accent font-medium"
+                  : "text-gray-600 hover:text-accent"
+              } transition-colors`}
+            >
+              Teaching
+            </Link>
           </div>
         </div>
       </div>
