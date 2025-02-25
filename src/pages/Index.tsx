@@ -44,7 +44,9 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold text-primary mb-4">Latest Blog Posts</h2>
+              <Link to="/blog" className="block hover:opacity-75 transition-opacity">
+                <h2 className="text-2xl font-bold text-primary mb-4">Latest Blog Posts</h2>
+              </Link>
               <div className="space-y-4">
                 <Link to="/blog/1" className="block hover:bg-gray-50 p-3 rounded-md transition-colors">
                   <h3 className="font-bold text-lg mb-1">Recent Developments in String Theory</h3>
@@ -58,7 +60,9 @@ const Index = () => {
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold text-primary mb-4">Recent Projects</h2>
+              <Link to="/projects" className="block hover:opacity-75 transition-opacity">
+                <h2 className="text-2xl font-bold text-primary mb-4">Recent Projects</h2>
+              </Link>
               <div className="space-y-3">
                 <div className="border-b pb-3">
                   <h3 className="font-medium text-gray-900">Quantum Field Simulator</h3>
@@ -76,7 +80,9 @@ const Index = () => {
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold text-primary mb-4">Teaching & Tutoring</h2>
+              <Link to="/teaching" className="block hover:opacity-75 transition-opacity">
+                <h2 className="text-2xl font-bold text-primary mb-4">Teaching & Tutoring</h2>
+              </Link>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <span className="text-accent">•</span>
