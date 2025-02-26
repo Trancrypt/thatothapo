@@ -6,6 +6,10 @@ const Navigation = () => {
   
   const isActive = (path: string) => location.pathname === path;
   
+  const handleClick = (path: string) => {
+    console.log(`Attempting to navigate to: ${path}`);
+  };
+  
   return (
     <nav className="bg-background-lighter shadow-lg border-b border-primary/20">
       <div className="container mx-auto px-4">
@@ -19,6 +23,7 @@ const Navigation = () => {
           <div className="flex space-x-8">
             <Link
               to="/blog"
+              onClick={() => handleClick("/blog")}
               className={`${
                 isActive("/blog")
                   ? "text-primary font-medium"
@@ -29,6 +34,7 @@ const Navigation = () => {
             </Link>
             <Link
               to="/projects"
+              onClick={() => handleClick("/projects")}
               className={`${
                 isActive("/projects")
                   ? "text-primary font-medium"
@@ -39,6 +45,7 @@ const Navigation = () => {
             </Link>
             <Link
               to="/teaching"
+              onClick={() => handleClick("/teaching")}
               className={`${
                 isActive("/teaching")
                   ? "text-primary font-medium"
