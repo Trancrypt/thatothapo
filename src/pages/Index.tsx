@@ -3,8 +3,28 @@ import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import { Avatar, AvatarImage, AvatarFallback } from "../components/ui/avatar";
 import { Button } from "../components/ui/button";
+import { useEffect, useState } from "react";
 
 const Index = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const cardsSection = document.getElementById('cards-section');
+      if (cardsSection) {
+        const rect = cardsSection.getBoundingClientRect();
+        const isInView = rect.top <= window.innerHeight - 200;
+        setIsVisible(isInView);
+      }
+    };
+
+    // Initial check
+    handleScroll();
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Background image with reduced opacity */}
@@ -19,28 +39,39 @@ const Index = () => {
       
       <Navigation />
       
-      <main className="container mx-auto px-4 py-12 relative z-10">
-        <section className="max-w-4xl mx-auto animate-fade-in">
-          <div className="flex flex-col md:flex-row items-center gap-8 mb-6">
-            <Avatar className="h-48 w-48 rounded-full border-4 border-primary/20 shadow-lg">
-              <AvatarImage src="/lovable-uploads/6ffacc28-72dd-4ad6-91e9-90209b58a247.png" alt="Thato Thapo" className="object-cover" />
-              <AvatarFallback>TT</AvatarFallback>
-            </Avatar>
-            <div>
-              <h1 className="text-4xl font-bold text-white">
-                Thato Thapo
-              </h1>
-              <p className="text-xl text-gray-200 mt-4 mb-4">
-                Masters graduate in Applied Mathematics from the University of Cape Town focusing on Theoretical Cosmology. A passion for physics and championing science outreach.
-              </p>
-              <Link to="/about">
-                <Button variant="secondary" size="lg">
-                  About Me
-                </Button>
-              </Link>
+      <main className="container mx-auto px-4 relative z-10">
+        {/* Hero Section */}
+        <section className="min-h-screen flex items-center justify-center animate-fade-in">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-8 mb-6">
+              <Avatar className="h-48 w-48 rounded-full border-4 border-primary/20 shadow-lg">
+                <AvatarImage src="/lovable-uploads/6ffacc28-72dd-4ad6-91e9-90209b58a247.png" alt="Thato Thapo" className="object-cover" />
+                <AvatarFallback>TT</AvatarFallback>
+              </Avatar>
+              <div>
+                <h1 className="text-4xl font-bold text-white">
+                  Thato Thapo
+                </h1>
+                <p className="text-xl text-gray-200 mt-4 mb-4">
+                  Masters graduate in Applied Mathematics from the University of Cape Town focusing on Theoretical Cosmology. A passion for physics and championing science outreach.
+                </p>
+                <Link to="/about">
+                  <Button variant="outline" size="lg" className="bg-background hover:bg-background-lighter border-primary/20 text-white">
+                    About Me
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
-          
+        </section>
+
+        {/* Cards Section */}
+        <section 
+          id="cards-section"
+          className={`max-w-4xl mx-auto pb-12 transition-opacity duration-1000 ${
+            isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-background-lighter p-6 rounded-lg shadow-lg border border-primary/20">
               <Link to="/blog" className="block hover:opacity-75 transition-opacity">
